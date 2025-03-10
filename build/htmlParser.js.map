@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/htmlParser.ts"],
+  "sourcesContent": ["import { CheerioAPI } from \"cheerio\";\n\nexport class HtmlParser {\n\tpublic parseHtml($: CheerioAPI): { ph: number; redox: number; flow: boolean; levelPh: number; levelRedox: number } {\n\t\treturn {\n\t\t\tph: parseFloat($(\"table\").eq(8).find(\"td\").eq(4).find(\"b\").text().trim()),\n\t\t\tredox: parseInt($(\"table\").eq(10).find(\"td\").eq(4).find(\"b\").text().trim()),\n\t\t\tflow: $(\"table\").eq(12).find(\"td\").eq(4).find(\"b\").text().trim() == \"An\",\n\t\t\tlevelPh: parseFloat($(\"table\").eq(18).find(\"td\").eq(4).find(\"b\").text().trim()),\n\t\t\tlevelRedox: parseFloat($(\"table\").eq(20).find(\"td\").eq(4).find(\"b\").text().trim()),\n\t\t};\n\t}\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEO,MAAM,WAAW;AAAA,EAChB,UAAU,GAAkG;AAClH,WAAO;AAAA,MACN,IAAI,WAAW,EAAE,OAAO,EAAE,GAAG,CAAC,EAAE,KAAK,IAAI,EAAE,GAAG,CAAC,EAAE,KAAK,GAAG,EAAE,KAAK,EAAE,KAAK,CAAC;AAAA,MACxE,OAAO,SAAS,EAAE,OAAO,EAAE,GAAG,EAAE,EAAE,KAAK,IAAI,EAAE,GAAG,CAAC,EAAE,KAAK,GAAG,EAAE,KAAK,EAAE,KAAK,CAAC;AAAA,MAC1E,MAAM,EAAE,OAAO,EAAE,GAAG,EAAE,EAAE,KAAK,IAAI,EAAE,GAAG,CAAC,EAAE,KAAK,GAAG,EAAE,KAAK,EAAE,KAAK,KAAK;AAAA,MACpE,SAAS,WAAW,EAAE,OAAO,EAAE,GAAG,EAAE,EAAE,KAAK,IAAI,EAAE,GAAG,CAAC,EAAE,KAAK,GAAG,EAAE,KAAK,EAAE,KAAK,CAAC;AAAA,MAC9E,YAAY,WAAW,EAAE,OAAO,EAAE,GAAG,EAAE,EAAE,KAAK,IAAI,EAAE,GAAG,CAAC,EAAE,KAAK,GAAG,EAAE,KAAK,EAAE,KAAK,CAAC;AAAA,IAClF;AAAA,EACD;AACD;",
+  "names": []
+}
