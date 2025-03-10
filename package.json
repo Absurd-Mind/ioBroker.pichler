@@ -1,6 +1,6 @@
 {
   "name": "iobroker.pichler",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ioBroker adapter to read and control a Dosieranlage from Pichler Kunststofftechnik ",
   "author": {
     "name": "AbsurdMind",

@@ -1,101 +1,124 @@
 {
-	"common": {
-		"name": "pichler",
-		"version": "0.1.0",
-		"news": {
-			"0.1.0": {
-				"en": "initial release",
-				"de": "erstausstrahlung",
-				"ru": "первоначальный выпуск",
-				"pt": "lançamento inicial",
-				"nl": "eerste release",
-				"fr": "libération initiale",
-				"it": "rilascio iniziale",
-				"es": "liberación inicial",
-				"pl": "początkowe zwolnienie",
-				"uk": "початковий реліз",
-				"zh-cn": "初步释放"
-			},
-			"0.0.1": {
-				"en": "initial release",
-				"de": "Erstveröffentlichung",
-				"ru": "Начальная версия",
-				"pt": "lançamento inicial",
-				"nl": "Eerste uitgave",
-				"fr": "Première version",
-				"it": "Versione iniziale",
-				"es": "Versión inicial",
-				"pl": "Pierwsze wydanie",
-				"uk": "Початкова версія",
-				"zh-cn": "首次出版"
-			}
-		},
-		"titleLang": {
-			"en": "Pichler",
-			"de": "Pichler",
-			"ru": "Пихлер Коннект",
-			"pt": "Conexão Pichler",
-			"nl": "Pichler",
-			"fr": "Pichlerer",
-			"it": "Pichler",
-			"es": "Conexión Pichler",
-			"pl": "Połączenie Pichlera",
-			"uk": "Pichler",
-			"zh-cn": "皮克勒连接"
-		},
-		"desc": {
-			"en": "Pichler short description",
-			"de": "Pichler Kurzbeschreibung",
-			"ru": "Краткое описание соединения Пихлера",
-			"pt": "Breve descrição da conexão Pichler",
-			"nl": "Pichler korte beschrijving",
-			"fr": "Brève description de Pichler",
-			"it": "Pichler collega una breve descrizione",
-			"es": "Pichler conecta una breve descripción",
-			"pl": "Krótki opis połączenia Pichlera",
-			"uk": "Pichler короткий опис",
-			"zh-cn": "Pichler 连接简短说明"
-		},
-		"authors": ["AbsurdMind <peter@myref.net>"],
-		"keywords": ["pichler", "ph", "spa", "smarthome", "pool", "whirlpool", "dosieranlage"],
-		"licenseInformation": {
-			"license": "MIT",
-			"type": "free"
-		},
-		"platform": "Javascript/Node.js",
-		"main": "build/main.js",
-		"icon": "pichler.png",
-		"enabled": true,
-		"extIcon": "https://raw.githubusercontent.com/Absurd-Mind/ioBroker.pichler/main/admin/pichler.png",
-		"readme": "https://github.com/Absurd-Mind/ioBroker.pichler/blob/main/README.md",
-		"loglevel": "info",
-		"tier": 3,
-		"mode": "daemon",
-		"type": "household",
-		"compact": true,
-		"connectionType": "local",
-		"dataSource": "poll",
-		"adminUI": {
-			"config": "json",
-			"tab": "materialize"
-		},
-		"supportCustoms": true,
-		"dependencies": [
-			{
-				"js-controller": ">=3.3.22"
-			}
-		],
-		"globalDependencies": [
-			{
-				"admin": ">=5.1.13"
-			}
-		]
-	},
-	"native": {
-		"host": "localhost",
-		"port": 80,
-		"interval": "60"
-	},
-	"objects": [],
-	"instanceObjects": []
+  "common": {
+    "name": "pichler",
+    "version": "0.2.0",
+    "news": {
+      "0.2.0": {
+        "en": "adapt to new html",
+        "de": "anpassung an neue html",
+        "ru": "адаптация к новому html",
+        "pt": "adaptar-se ao novo html",
+        "nl": "aanpassen aan nieuwe html",
+        "fr": "s'adapter au nouveau html",
+        "it": "adattarsi al nuovo html",
+        "es": "adapt to new html",
+        "pl": "dostosowanie do nowego html",
+        "uk": "адаптувати новий html",
+        "zh-cn": "适应新 html"
+      },
+      "0.1.0": {
+        "en": "initial release",
+        "de": "erstausstrahlung",
+        "ru": "первоначальный выпуск",
+        "pt": "lançamento inicial",
+        "nl": "eerste release",
+        "fr": "libération initiale",
+        "it": "rilascio iniziale",
+        "es": "liberación inicial",
+        "pl": "początkowe zwolnienie",
+        "uk": "початковий реліз",
+        "zh-cn": "初步释放"
+      },
+      "0.0.1": {
+        "en": "initial release",
+        "de": "Erstveröffentlichung",
+        "ru": "Начальная версия",
+        "pt": "lançamento inicial",
+        "nl": "Eerste uitgave",
+        "fr": "Première version",
+        "it": "Versione iniziale",
+        "es": "Versión inicial",
+        "pl": "Pierwsze wydanie",
+        "uk": "Початкова версія",
+        "zh-cn": "首次出版"
+      }
+    },
+    "titleLang": {
+      "en": "Pichler",
+      "de": "Pichler",
+      "ru": "Пихлер Коннект",
+      "pt": "Conexão Pichler",
+      "nl": "Pichler",
+      "fr": "Pichlerer",
+      "it": "Pichler",
+      "es": "Conexión Pichler",
+      "pl": "Połączenie Pichlera",
+      "uk": "Pichler",
+      "zh-cn": "皮克勒连接"
+    },
+    "desc": {
+      "en": "Pichler short description",
+      "de": "Pichler Kurzbeschreibung",
+      "ru": "Краткое описание соединения Пихлера",
+      "pt": "Breve descrição da conexão Pichler",
+      "nl": "Pichler korte beschrijving",
+      "fr": "Brève description de Pichler",
+      "it": "Pichler collega una breve descrizione",
+      "es": "Pichler conecta una breve descripción",
+      "pl": "Krótki opis połączenia Pichlera",
+      "uk": "Pichler короткий опис",
+      "zh-cn": "Pichler 连接简短说明"
+    },
+    "authors": [
+      "AbsurdMind <peter@myref.net>"
+    ],
+    "keywords": [
+      "pichler",
+      "ph",
+      "spa",
+      "smarthome",
+      "pool",
+      "whirlpool",
+      "dosieranlage"
+    ],
+    "licenseInformation": {
+      "license": "MIT",
+      "type": "free"
+    },
+    "platform": "Javascript/Node.js",
+    "main": "build/main.js",
+    "icon": "pichler.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/Absurd-Mind/ioBroker.pichler/main/admin/pichler.png",
+    "readme": "https://github.com/Absurd-Mind/ioBroker.pichler/blob/main/README.md",
+    "loglevel": "info",
+    "tier": 3,
+    "mode": "daemon",
+    "type": "household",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "json",
+      "tab": "materialize"
+    },
+    "supportCustoms": true,
+    "dependencies": [
+      {
+        "js-controller": ">=3.3.22"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=5.1.13"
+      }
+    ]
+  },
+  "native": {
+    "host": "localhost",
+    "port": 80,
+    "interval": "60"
+  },
+  "objects": [],
+  "instanceObjects": []
 }
