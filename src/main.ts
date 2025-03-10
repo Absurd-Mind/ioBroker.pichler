@@ -7,12 +7,14 @@
 import * as utils from "@iobroker/adapter-core";
 import axios from "axios";
 import cheerio, { CheerioAPI } from "cheerio";
+import { HtmlParser } from "./htmlParser";
 
 // Load your modules here, e.g.:
 // import * as fs from "fs";
 
 class Pichler extends utils.Adapter {
 	scanIntervall: ioBroker.Interval | undefined = undefined;
+	htmlParser = new HtmlParser();
 
 	public constructor(options: Partial<utils.AdapterOptions> = {}) {
 		super({
@@ -105,25 +107,13 @@ class Pichler extends utils.Adapter {
 		const $ = await this.getHtml(this.config.host, this.config.port);
 		if ($) {
 			this.log.debug("parsing data");
+			const values = this.htmlParser.parseHtml($);
 
-			await this.setStateAsync("ph", parseFloat($("table").eq(9).find("td").eq(4).find("b").text().trim()), true);
-			await this.setStateAsync(
-				"redox",
-				parseInt($("table").eq(11).find("td").eq(4).find("b").text().trim()),
-				true,
-			);
-			await this.setStateAsync("flow", $("table").eq(13).find("td").eq(4).find("b").text().trim() == "An", true);
-
-			await this.setStateAsync(
-				"level_ph",
-				parseFloat($("table").eq(19).find("td").eq(4).find("b").text().trim()),
-				true,
-			);
-			await this.setStateAsync(
-				"level_redox",
-				parseFloat($("table").eq(21).find("td").eq(4).find("b").text().trim()),
-				true,
-			);
+			await this.setStateAsync("ph", values.ph, true);
+			await this.setStateAsync("redox", values.redox, true);
+			await this.setStateAsync("flow", values.flow, true);
+			await this.setStateAsync("level_ph", values.levelPh, true);
+			await this.setStateAsync("level_redox", values.levelRedox, true);
 		}
 	}
 
