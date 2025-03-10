@@ -116,6 +116,10 @@ Please refer to the [`dev-server` documentation](https://github.com/ioBroker/dev
 	### **WORK IN PROGRESS**
 -->
 
+### **WORK IN PROGRESS**
+
+-   (AbsurdMind) adapt to new html
+
 ### 0.1.0 (2024-05-05)
 
 -   (AbsurdMind) initial release
@@ -124,7 +128,7 @@ Please refer to the [`dev-server` documentation](https://github.com/ioBroker/dev
 
 MIT License
 
-Copyright (c) 2024 AbsurdMind <peter@myref.net>
+Copyright (c) 2025 AbsurdMind <peter@myref.net>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
