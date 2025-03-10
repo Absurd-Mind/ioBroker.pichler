@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "pichler",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "news": {
+      "0.2.1": {
+        "en": "add build folder",
+        "de": "erstellen von ordnern",
+        "ru": "добавить build folder",
+        "pt": "adicionar pasta de compilação",
+        "nl": "bouwmap toevoegen",
+        "fr": "ajouter un dossier de construction",
+        "it": "aggiungere la cartella di compilazione",
+        "es": "añadir carpeta",
+        "pl": "dodaj folder build",
+        "uk": "додати папку збірки",
+        "zh-cn": "添加构建文件夹"
+      },
       "0.2.0": {
         "en": "adapt to new html",
         "de": "anpassung an neue html",
