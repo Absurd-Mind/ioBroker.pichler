@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "pichler",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "news": {
+      "0.2.2": {
+        "en": "Improvement html parser",
+        "de": "Verbesserung html parser",
+        "ru": "улучшение html parser",
+        "pt": "melhoria html parser",
+        "nl": "verbetering html parser",
+        "fr": "amélioration html parser",
+        "it": "miglioramento html parser",
+        "es": "mejora html parser",
+        "pl": "ulepszenie html parser",
+        "uk": "улучшение html parser",
+        "zh-cn": "改进 html parser"
+      },
       "0.2.1": {
         "en": "add build folder",
         "de": "erstellen von ordnern",
