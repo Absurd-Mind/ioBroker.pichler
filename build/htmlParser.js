@@ -33,7 +33,9 @@ class HtmlParser {
   }
   getRowValue($, label) {
     const row = $("tr").filter(
-      (_, element) => $(element).find("td").toArray().some((cell) => $(cell).text().replace(/\u00a0/g, " ").trim() === label)
+      (_, element) => $(element).find("td").toArray().some(
+        (cell) => $(cell).text().replace(/\u00a0/g, " ").trim() === label
+      )
     ).first();
     if (row.length === 0) {
       return null;

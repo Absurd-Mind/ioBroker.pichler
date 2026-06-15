@@ -23,7 +23,13 @@ export class HtmlParser {
 				$(element)
 					.find("td")
 					.toArray()
-					.some((cell) => $(cell).text().replace(/\u00a0/g, " ").trim() === label),
+					.some(
+						(cell) =>
+							$(cell)
+								.text()
+								.replace(/\u00a0/g, " ")
+								.trim() === label,
+					),
 			)
 			.first();
 
